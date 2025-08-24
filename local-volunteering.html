@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Volunteering — Volunteers Connect</title>
+  <meta name="description" content="Discover local volunteer opportunities in your community and make a difference where you live." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Featured Local Events Styling - Encouragement look */
+    .featured-local {
+      background: #e6fff2; /* Encouragement-style soft green */
+      color: #333;
+      padding: 3rem 1.5rem;
+      border-radius: 12px;
+      margin-top: 2rem;
+      border-left: 6px solid #00a86b; /* Accent stripe */
+    }
+    .featured-local .section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .featured-local .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #007744; /* Strong green title */
+    }
+    .featured-local .section-description {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      color: #444;
+    }
+    .featured-local .card {
+      background: #fff;
+      color: #333;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      margin-bottom: 1.5rem;
+    }
+    .featured-local .stats {
+      margin-top: 1rem;
+      background: #f9f9f9;
+      padding: 0.8rem;
+      border-radius: 8px;
+    }
+    .featured-local strong {
+      color: #00a86b;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <svg class="heart-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+        <span>Volunteers Connect</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="organized-volunteering.html" class="nav-link">Organized Volunteering</a>
+        <a href="local-volunteering.html" class="nav-link active">Local Volunteering</a>
+        <a href="international-ideas.html" class="nav-link">International Ideas</a>
+        <a href="signup.html" class="btn btn-sm btn-primary">Get Involved</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Local Volunteering</h1>
+        <p class="hero-description">
+          Make a real difference in your own neighborhood.<br>
+          From food banks to tutoring programs,<br>
+          your community needs you.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="page-main">
+    <div class="container">
+      <div class="page-content">
+
+        <!-- Opportunities Grid -->
+        <div class="opportunity-grid">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Community Centers</h3>
+              <p class="card-description">Support local hubs where families, youth, and seniors gather.</p>
+            </div>
+            <div class="card-content">
+              <ul class="benefit-list">
+                <li class="benefit-item">After-school programs</li>
+                <li class="benefit-item">Elderly support</li>
+                <li class="benefit-item">Family events</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Environmental Projects</h3>
+              <p class="card-description">Join local groups dedicated to preserving nature and green spaces.</p>
+            </div>
+            <div class="card-content">
+              <ul class="benefit-list">
+                <li class="benefit-item">Park clean-ups</li>
+                <li class="benefit-item">Tree planting</li>
+                <li class="benefit-item">Recycling campaigns</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="opportunity-grid">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Food Banks</h3>
+              <p class="card-description">Help distribute food to families in need and reduce waste.</p>
+            </div>
+            <div class="card-content">
+              <ul class="benefit-list">
+                <li class="benefit-item">Sorting donations</li>
+                <li class="benefit-item">Packing boxes</li>
+                <li class="benefit-item">Community outreach</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Tutoring & Mentoring</h3>
+              <p class="card-description">Support students and young professionals through guidance and teaching.</p>
+            </div>
+            <div class="card-content">
+              <ul class="benefit-list">
+                <li class="benefit-item">Homework help</li>
+                <li class="benefit-item">Career advice</li>
+                <li class="benefit-item">Language learning</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benefits of Local Volunteering -->
+        <article class="card card-primary">
+          <div class="card-header">
+            <h2 class="card-title large">Why Volunteer Locally?</h2>
+          </div>
+          <div class="card-content">
+            <div class="feature-grid">
+              <div class="feature">
+                <h3 class="feature-title">Immediate Impact</h3>
+                <p class="feature-description">See the results of your work quickly in your own neighborhood.</p>
+              </div>
+              <div class="feature">
+                <h3 class="feature-title">Stronger Community</h3>
+                <p class="feature-description">Create stronger bonds with neighbors and local groups.</p>
+              </div>
+              <div class="feature">
+                <h3 class="feature-title">Flexible Options</h3>
+                <p class="feature-description">Volunteer in ways that fit your schedule and skills.</p>
+              </div>
+              <div class="feature">
+                <h3 class="feature-title">Personal Growth</h3>
+                <p class="feature-description">Gain confidence and leadership skills while giving back.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Featured Local Events -->
+        <section class="featured-local">
+          <div class="section-header">
+            <h2 class="section-title">Featured Local Events</h2>
+            <p class="section-description">Examples of how neighbors are making a difference together.</p>
+          </div>
+
+          <div class="opportunity-grid">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Neighborhood Clean-Up</h3>
+                <p class="card-description">Weekly park and street clean-ups organized by residents.</p>
+              </div>
+              <div class="card-content">
+                <ul class="benefit-list">
+                  <li class="benefit-item">Trash collection</li>
+                  <li class="benefit-item">Graffiti removal</li>
+                  <li class="benefit-item">Beautification projects</li>
+                </ul>
+                <div class="stats">
+                  <p><strong>👥 People Involved:</strong> 56 volunteers</p>
+                  <p><strong>💰 Funds Raised:</strong> $4,200</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Food Pantry Drive</h3>
+                <p class="card-description">Local initiative collecting canned goods for families in need.</p>
+              </div>
+              <div class="card-content">
+                <ul class="benefit-list">
+                  <li class="benefit-item">Donation collection</li>
+                  <li class="benefit-item">Sorting & packaging</li>
+                  <li class="benefit-item">Family distribution</li>
+                </ul>
+                <div class="stats">
+                  <p><strong>👥 People Involved:</strong> 82 volunteers</p>
+                  <p><strong>💰 Funds Raised:</strong> $7,800</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Library Reading Program</h3>
+                <p class="card-description">Volunteers reading to children and helping with literacy programs.</p>
+              </div>
+              <div class="card-content">
+                <ul class="benefit-list">
+                  <li class="benefit-item">Story sessions</li>
+                  <li class="benefit-item">Homework help</li>
+                  <li class="benefit-item">Language learning</li>
+                </ul>
+                <div class="stats">
+                  <p><strong>👥 People Involved:</strong> 34 volunteers</p>
+                  <p><strong>💰 Funds Raised:</strong> $2,600</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <h3>Volunteers Connect</h3>
+        <p>Building stronger communities through meaningful action.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="organized-volunteering.html">Organized</a>
+        <a href="local-volunteering.html">Local</a>
+        <a href="international-ideas.html">International</a>
+      </div>
+      <div class="footer-right">
+        <p>&copy; 2025 Volunteers Connect. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

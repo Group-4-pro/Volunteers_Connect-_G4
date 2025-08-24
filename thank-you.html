@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You — Volunteers Connect</title>
+  <meta name="description" content="Thank you for signing up with Volunteers Connect. Together, we can make a difference." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Stats section */
+    .stats-section {
+      background: #f4f9ff;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .stats-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .stat-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .progress-bar {
+      background: #e0e0e0;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 20px;
+      margin-top: 0.5rem;
+    }
+    .progress-fill {
+      background: #0077cc;
+      height: 100%;
+      width: 0;
+      transition: width 2s ease;
+    }
+
+    /* Donation form */
+    .donation-section {
+      background: #eef7f2;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .donation-form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .donation-form h3 {
+      margin-bottom: 1rem;
+    }
+    .donation-form input, 
+    .donation-form select {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .donation-form button {
+      width: 100%;
+      padding: 1rem;
+      background: #0077cc;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .donation-form button:hover {
+      background: #005fa3;
+    }
+
+    /* Gratitude popup */
+    .gratitude-modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    .gratitude-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: fadeIn 0.4s ease;
+    }
+    .gratitude-card h2 {
+      color: #0077cc;
+      margin-bottom: 1rem;
+    }
+    .gratitude-card button {
+      margin-top: 1rem;
+      background: #0077cc;
+      color: #fff;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .gratitude-card button:hover {
+      background: #005fa3;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.9);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
+    /* Recent donations */
+    .recent-donations {
+      margin-top: 2rem;
+      text-align: left;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .recent-donations h4 {
+      margin-bottom: 0.8rem;
+    }
+    .recent-donations ul {
+      list-style: none;
+      padding: 0;
+    }
+    .recent-donations li {
+      background: #fff;
+      margin-bottom: 0.6rem;
+      padding: 0.8rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <svg class="heart-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 
+          1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        <span>Volunteers Connect</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="organized-volunteering.html" class="nav-link">Organized Volunteering</a>
+        <a href="local-volunteering.html" class="nav-link">Local Volunteering</a>
+        <a href="international-ideas.html" class="nav-link">International Ideas</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Thank You, <span id="userName">Volunteer</span>!</h1>
+          <p class="hero-description">
+            Your submission has been received. We’ll be in touch soon with opportunities that match your interests.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container stats-grid">
+        <div class="stat-card">
+          <h3>Total Members</h3>
+          <p><strong id="membersCount">1,245</strong> people have joined so far!</p>
+          <div class="progress-bar">
+            <div class="progress-fill" id="membersBar"></div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <h3>Total Funds Raised</h3>
+          <p><strong id="fundsAmount">$82,500</strong> of our $100,000 goal</p>
+          <div class="progress-bar">
+            <div class="progress-fill" id="fundsBar"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donation Form -->
+    <section class="donation-section">
+      <div class="container">
+        <form class="donation-form" id="donationForm">
+          <h3>💖 Support Our Mission</h3>
+          <p>Your contribution helps us expand volunteering opportunities worldwide.</p><br>
+          <input type="text" id="donorName" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <select id="donationAmount" required>
+            <option value="">Select Amount</option>
+            <option value="10">$10</option>
+            <option value="25">$25</option>
+            <option value="50">$50</option>
+            <option value="100">$100</option>
+            <option value="custom">Other Amount</option>
+          </select>
+          <input type="number" id="customAmount" placeholder="Enter custom amount" style="display:none;" min="1">
+          <button type="submit">Donate Now</button>
+        </form>
+
+        <!-- Recent donations -->
+        <div class="recent-donations">
+          <h4>Recent Donations</h4>
+          <ul id="donationsList">
+            <li>🌟 Emily from Canada donated $50</li>
+            <li>🌟 Ahmed from Egypt donated $25</li>
+            <li>🌟 Sofia from Spain donated $100</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Gratitude Modal -->
+  <div class="gratitude-modal" id="gratitudeModal">
+    <div class="gratitude-card">
+      <h2>💖 Thank You!</h2>
+      <p id="gratitudeMessage"></p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <h3>Volunteers Connect</h3>
+        <p>Building stronger communities through meaningful action.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="organized-volunteering.html">Organized</a>
+        <a href="local-volunteering.html">Local</a>
+        <a href="international-ideas.html">International</a>
+      </div>
+      <div class="footer-right">
+        <p>&copy; 2025 Volunteers Connect. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // Animate stats bars
+    window.addEventListener("load", () => {
+      document.getElementById("membersBar").style.width = "62%"; 
+      document.getElementById("fundsBar").style.width = "82%";   
+    });
+
+    // Donation form logic
+    const donationSelect = document.getElementById("donationAmount");
+    const customAmount = document.getElementById("customAmount");
+    const form = document.getElementById("donationForm");
+    const donationsList = document.getElementById("donationsList");
+
+    donationSelect.addEventListener("change", function() {
+      if (this.value === "custom") {
+        customAmount.style.display = "block";
+        customAmount.required = true;
+      } else {
+        customAmount.style.display = "none";
+        customAmount.required = false;
+      }
+    });
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const donorName = document.getElementById("donorName").value || "Anonymous";
+      let selectedAmount = donationSelect.value;
+      if (selectedAmount === "custom") {
+        selectedAmount = customAmount.value ? `$${customAmount.value}` : "an unspecified amount";
+      } else {
+        selectedAmount = `$${selectedAmount}`;
+      }
+
+      // Show popup modal
+      document.getElementById("gratitudeMessage").textContent = 
+        `${donorName}, we deeply appreciate your generous donation of ${selectedAmount}.`;
+      document.getElementById("gratitudeModal").style.display = "flex";
+
+      // Add to recent donations
+      const li = document.createElement("li");
+      li.textContent = `🌟 ${donorName} donated ${selectedAmount}`;
+      donationsList.prepend(li);
+
+      // Reset form
+      form.reset();
+      customAmount.style.display = "none";
+    });
+
+    function closeModal() {
+      document.getElementById("gratitudeModal").style.display = "none";
+    }
+  </script>
+</body>
+</html>

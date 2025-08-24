@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Involved — Volunteers Connect</title>
+  <meta name="description" content="Sign up to join Volunteers Connect and make an impact in your community and beyond." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .leaders-section {
+      background: #f9f9f9;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 10px;
+    }
+    .leaders-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .leader-card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    .leader-card h3 {
+      margin: 0 0 0.5rem;
+      color: #0077cc;
+    }
+    .leader-card p {
+      margin: 0.3rem 0;
+      font-size: 0.95rem;
+    }
+    .leader-card strong {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <svg class="heart-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+        <span>Volunteers Connect</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="organized-volunteering.html" class="nav-link">Organized Volunteering</a>
+        <a href="local-volunteering.html" class="nav-link">Local Volunteering</a>
+        <a href="international-ideas.html" class="nav-link">International Ideas</a>
+        <a href="signup.html" class="btn btn-sm btn-primary active">Get Involved</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Join Volunteers Connect</h1>
+        <p class="hero-description">
+          Sign up today and start your journey towards making a difference — locally and globally.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sign Up Form -->
+  <main class="page-main">
+    <div class="container">
+      <div class="page-content">
+        <header class="page-header">
+          <h2 class="page-title">Sign Up</h2>
+          <p class="page-description">Fill in your details to get started with Volunteers Connect.</p>
+        </header>
+
+        <form id="signup-form" class="card" style="max-width: 600px; margin: 0 auto;">
+          <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
+            <br>
+            <div>
+              <input type="text" id="name" name="name" class="input-field" placeholder="Full Name" required>
+            </div>
+            <div>
+              <input type="email" id="email" name="email" class="input-field" placeholder="Email Address" required>
+            </div>
+            <div>
+              <select id="interest" name="interest" class="input-field" required>
+                <option value="">Select your area of interest</option>
+                <optgroup label="Organized Volunteering">
+                  <option value="NGO Programs">NGO Programs</option>
+                  <option value="School & University Projects">School & University Projects</option>
+                  <option value="Charity Organizations">Charity Organizations</option>
+                </optgroup>
+                <optgroup label="Local Volunteering">
+                  <option value="Community Centers">Community Centers</option>
+                  <option value="Environmental Projects">Environmental Projects</option>
+                  <option value="Food Banks">Food Banks</option>
+                  <option value="Tutoring & Mentoring">Tutoring & Mentoring</option>
+                </optgroup>
+                <optgroup label="International Volunteering">
+                  <option value="Teaching Abroad">Teaching Abroad</option>
+                  <option value="Healthcare Missions">Healthcare Missions</option>
+                  <option value="Environmental Conservation">Environmental Conservation</option>
+                  <option value="Disaster Relief">Disaster Relief</option>
+                </optgroup>
+                <option value="other">Other (please specify)</option>
+              </select>
+            </div>
+            <!-- Hidden field for "Other" interest -->
+            <div id="other-interest-container" style="display:none;">
+              <input type="text" id="other-interest" name="otherInterest" class="input-field" placeholder="Enter your specific interest">
+            </div>
+            <div>
+              <textarea id="message" name="message" rows="4" class="input-field" placeholder="Tell us why you want to volunteer"></textarea>
+            </div>
+            <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+          </div>
+        </form>
+
+<!-- Leaders Section -->
+<section class="leaders-section">
+  <h2 class="section-title">🌍 Meet Our Leaders</h2>
+  <p class="section-description">Dedicated leaders from across Asia and beyond inspiring thousands through their service.</p><br>
+  <div class="leaders-grid">
+    <!-- Ms. Endy (Eco Specialist at Top) -->
+    <div class="leader-card eco-specialist" style="border-left: 6px solid #28a745; background: #f0fff4;">
+      <h3>Ms. Endy <span style="font-size: 0.85rem; color: #28a745;">🌱 Eco Specialist</span></h3>
+      <p><strong>From:</strong> Russia</p>
+      <p><strong>Location:</strong> Moscow</p>
+      <p><strong>Contact:</strong> +7 901 234 5678</p>
+      <p><strong>Achievement:</strong> Pioneered eco-campaigns in Russia, reducing plastic use in 200+ cities.</p>
+    </div>
+
+    <div class="leader-card">
+      <h3>Frederico</h3>
+      <p><strong>From:</strong> China</p>
+      <p><strong>Location:</strong> Beijing</p>
+      <p><strong>Contact:</strong> +86 138 0000 1234</p>
+      <p><strong>Achievement:</strong> Organized nationwide tree-planting drive with 50,000 volunteers.</p>
+    </div>
+
+    <div class="leader-card">
+      <h3>Justin</h3>
+      <p><strong>From:</strong> Korea</p>
+      <p><strong>Location:</strong> Seoul</p>
+      <p><strong>Contact:</strong> +82 10 2345 6789</p>
+      <p><strong>Achievement:</strong> Led disaster relief missions during floods, rebuilding 1,000+ homes.</p>
+    </div>
+
+    <div class="leader-card">
+      <h3>William</h3>
+      <p><strong>From:</strong> Mongolia</p>
+      <p><strong>Location:</strong> Ulaanbaatar</p>
+      <p><strong>Contact:</strong> +976 9911 2233</p>
+      <p><strong>Achievement:</strong> Launched education projects, providing free tutoring to 5,000 students.</p>
+    </div>
+
+    <!-- Yan Naung moved to bottom middle -->
+    <div class="leader-card">
+      <h3>Yan Naung</h3>
+      <p><strong>From:</strong> Vietnam</p>
+      <p><strong>Location:</strong> Hanoi</p>
+      <p><strong>Contact:</strong> +84 912 345 678</p>
+      <p><strong>Achievement:</strong> Raised $2M+ in medical aid to rural communities across Vietnam.</p>
+    </div>
+  </div>
+</section>
+
+
+
+        <!-- Encouragement Section -->
+        <section class="encouragement-section">
+          <div class="container">
+            <div class="encouragement-content">
+              <h2 class="card-title">🌟 Every Step Counts</h2>
+              <p class="card-description">
+                By signing up, you are taking the first step toward transforming lives — including your own.
+                <br>Volunteers bring hope, kindness, and change to communities everywhere.
+                <br>
+                <strong>Your time, skills, and passion can inspire others and leave a lasting impact.</strong>
+              </p><br>
+              <p class="card-quote">
+                “Alone, we can do so little; together, we can do so much.” — Helen Keller
+              </p><br>
+              <a href="organized-volunteering.html" class="btn btn-secondary btn-lg">See Current Programs</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <h3>Volunteers Connect</h3>
+        <p>Building stronger communities through meaningful action.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="organized-volunteering.html">Organized</a>
+        <a href="local-volunteering.html">Local</a>
+        <a href="international-ideas.html">International</a>
+      </div>
+      <div class="footer-right">
+        <p>&copy; 2025 Volunteers Connect. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const form = document.getElementById("signup-form");
+    const interestSelect = document.getElementById("interest");
+    const otherContainer = document.getElementById("other-interest-container");
+    const otherInput = document.getElementById("other-interest");
+
+    // Show/hide "Other" input
+    interestSelect.addEventListener("change", () => {
+      if (interestSelect.value === "other") {
+        otherContainer.style.display = "block";
+        otherInput.required = true;
+      } else {
+        otherContainer.style.display = "none";
+        otherInput.required = false;
+      }
+    });
+
+    // Redirect to thank-you.html with data
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      let interest = interestSelect.value;
+      const otherInterest = otherInput.value;
+
+      let url = `thank-you.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`;
+      if (interest === "other" && otherInterest) {
+        url += `&interest=${encodeURIComponent(otherInterest)}`;
+      } else {
+        url += `&interest=${encodeURIComponent(interest)}`;
+      }
+      window.location.href = url;
+    });
+  </script>
+</body>
+</html>
